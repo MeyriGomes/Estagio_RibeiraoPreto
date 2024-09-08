@@ -1,0 +1,18 @@
+// Define o valor de parada do loop
+let INDICE = 12;
+// inicializa a variavel que armazenará a soma dos valores
+let SOMA = 0;
+// inicia a variável de controle do loop
+let K = 1;
+
+// inicia o loop que continuará enquanto K for menor que INDICE
+while (K < INDICE){
+  //incrementa 1 em K a cada verificação do loop
+  K = K+1;
+// adiciona o valor atual em K à variavel SOMA
+SOMA = SOMA + K;
+}
+// quando o loop termina, exibe o valor final de SOMA no console
+console.log(SOMA);
+
+//ao final, o valor final exibido será 65
