@@ -1,0 +1,33 @@
+// Função que gera a sequência de Fibonacci até o valor maior ou igual a "n"
+function fibonacci (n) {
+// inicia a sequência de Fibonacci com os dois primeiros números 0 e 1
+  let SequenciaF = [0, 1];
+// enquanto o último número da sequência for menor que "n", continue gerando a sequência
+while (SequenciaF[SequenciaF.length - 1] < n) {
+// calcula o proximo valor com a soma dos dois últimos números da sequência
+  let valor = SequenciaF[SequenciaF.length -1] + SequenciaF[SequenciaF.length -2];
+// adiciona o novo valor à sequência
+  SequenciaF.push(valor);
+}
+//retorna a sequência de fibonacci gerada
+return SequenciaF;
+}
+
+//Função que verifica se um número "num" está presente na sequência de Fibonacci
+function numFibonacci(num) {
+// chama a função "fibonacci" para gerar a sequência até o "num"
+  let SequenciaF = fibonacci(num);
+// verifica se "num"está na sequência gerada
+return SequenciaF.includes(num);
+}
+
+// solicita ao usuário que informe um número, e converte a entrada em um número inteiro
+let numero = parseInt(prompt("Informe um número: "));
+// verifica se o número informado está na sequência de Fibonacci
+if (numFibonacci(numero)) {
+  //Se o número estiver na sequência, exibe a mensagem que ele pertence à sequência
+  console.log(`O número ${numero} pertence à sequencia de Fibonacci.`);
+} else {
+  // se o número náo estiver na sequência, exibe a mensagem de que ele não pertence à sequência de Fibonacci
+  console.log(`O número ${numero} não pertence à sequência de Fibonacci.`);
+}
