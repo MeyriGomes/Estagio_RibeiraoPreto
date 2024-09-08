@@ -1,8 +1,8 @@
-// Função que gera a sequência de Fibonacci até o valor maior ou igual a "n"
+// Função que gera a sequência de Fibonacci até o valor maior ou igual a 'n'
 function fibonacci (n) {
 // inicia a sequência de Fibonacci com os dois primeiros números 0 e 1
   let SequenciaF = [0, 1];
-// enquanto o último número da sequência for menor que "n", continue gerando a sequência
+// enquanto o último número da sequência for menor que 'n', continue gerando a sequência
 while (SequenciaF[SequenciaF.length - 1] < n) {
 // calcula o proximo valor com a soma dos dois últimos números da sequência
   let valor = SequenciaF[SequenciaF.length -1] + SequenciaF[SequenciaF.length -2];
@@ -13,11 +13,11 @@ while (SequenciaF[SequenciaF.length - 1] < n) {
 return SequenciaF;
 }
 
-//Função que verifica se um número "num" está presente na sequência de Fibonacci
+//Função que verifica se um número 'num' está presente na sequência de Fibonacci
 function numFibonacci(num) {
-// chama a função "fibonacci" para gerar a sequência até o "num"
+// chama a função 'fibonacci' para gerar a sequência até o 'num'
   let SequenciaF = fibonacci(num);
-// verifica se "num"está na sequência gerada
+// verifica se 'num' está na sequência gerada
 return SequenciaF.includes(num);
 }
 
